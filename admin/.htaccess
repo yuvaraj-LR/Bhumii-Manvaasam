@@ -1,0 +1,53 @@
+RewriteEngine On
+
+
+<IfModule mod_speling.c>
+    CheckSpelling Off
+</IfModule>
+Options -Indexes
+
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+RewriteRule ^home index.php?id=home [NC,QSA,L]
+RewriteRule ^delete index.php?id=delete [NC,QSA,L]
+RewriteRule ^all index.php?id=all [NC,QSA,L]
+RewriteRule ^users index.php?id=users [NC,QSA,L]
+RewriteRule ^jobs index.php?id=jobs [NC,QSA,L]
+RewriteRule ^events index.php?id=events [NC,QSA,L]
+RewriteRule ^profile index.php?id=profile [NC,QSA,L]
+RewriteRule ^courses index.php?id=courses [NC,QSA,L]
+
+RewriteRule ^classroom index.php?id=classroom [NC,QSA,L]
+
+RewriteRule ^class index.php?id=class [NC,QSA,L]
+RewriteRule ^lessons index.php?id=lessons [NC,QSA,L]
+
+RewriteRule ^addcourse index.php?id=addcourse [NC,QSA,L]
+RewriteRule ^editcourse index.php?id=editcourse [NC,QSA,L]
+
+RewriteRule ^addevent index.php?id=addevent [NC,QSA,L]
+RewriteRule ^editevent index.php?id=editevent [NC,QSA,L]
+
+RewriteRule ^addjob index.php?id=addjob [NC,QSA,L]
+RewriteRule ^editjob index.php?id=editjob [NC,QSA,L]
+
+RewriteRule ^addclass index.php?id=addclass [NC,QSA,L]
+RewriteRule ^editclass index.php?id=editclass [NC,QSA,L]
+
+RewriteRule ^addlesson index.php?id=addlesson [NC,QSA,L]
+RewriteRule ^editlesson index.php?id=editlesson [NC,QSA,L]
+
+RewriteRule ^books index.php?id=books [NC,QSA,L]
+RewriteRule ^addbook index.php?id=addbook [NC,QSA,L]
+RewriteRule ^editbook index.php?id=editbook [NC,QSA,L]
+
+RewriteRule ^messages index.php?id=messages [NC,QSA,L]
+RewriteRule ^notification index.php?id=notification [NC,QSA,L]
+RewriteRule ^logout components/logout.php [NC,QSA,L]
